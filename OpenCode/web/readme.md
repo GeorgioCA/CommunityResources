@@ -121,12 +121,12 @@ journalctl -u opencode -f
 ---
 
 ## 📁 File Structure
-
+```bash
 /root/.config/opencode/opencode.json
 /etc/opencode.env
 /etc/systemd/system/opencode.service
 /root/.opencode/bin/opencode
-
+```
 ---
 
 ## 🧠 Design Philosophy
