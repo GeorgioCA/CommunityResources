@@ -33,9 +33,9 @@ A simple, **re-runnable setup script** to install and manage OpenCode on a VPS w
 
 ## 🚀 Quick Start
 
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/opencode-installer/main/opencode-setup.sh
-chmod +x opencode-setup.sh
-sudo ./opencode-setup.sh
+curl -O https://raw.githubusercontent.com/GeorgioCA/CommunityResources/refs/heads/main/OpenCode/web/opencode-web-installer.sh
+chmod +x opencode-web-installer.sh
+sudo ./opencode-web-installer.sh
 
 ---
 
