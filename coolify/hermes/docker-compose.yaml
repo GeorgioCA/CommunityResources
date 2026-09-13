@@ -7,7 +7,7 @@
 
 services:
   hermes-agent:
-    image: hermes-agent
+    image: 'nousresearch/hermes-agent@sha256:latest'
     command: gateway run
     environment:
       - HERMES_HOME=/home/hermes/.hermes
