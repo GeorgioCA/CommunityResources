@@ -1,0 +1,29 @@
+# documentation: https://github.com/NousResearch/hermes-agent
+# slogan: Hermes Agent — autonomous AI agent with persistent memory, scheduling.
+# category: ai
+# tags: ai, agent, llm, chatbot, hermes, openrouter, anthropic, openai
+# logo: svgs/hermes-agent.png
+# port: NA
+
+services:
+  hermes-agent:
+    image: hermes-agent
+    command: gateway run
+    environment:
+      - HERMES_HOME=/home/hermes/.hermes
+      - HERMES_UID=1000
+      - HERMES_GID=1000
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+    volumes:
+      - hermes-home:/home/hermes/.hermes
+      - hermes-agent-src:/opt/hermes
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /home/hermes/.hermes || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      
